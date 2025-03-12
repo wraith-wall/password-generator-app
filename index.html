@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+    <link rel="stylesheet" href="css/modern-normalize.css" />
+    <link rel="stylesheet" href="css/styles.min.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="app">
+          <header class="app__header">
+            <h1 class="app__title">Password Generator</h1>
+          </header>
+          <div class="app__output">
+            <span class="app__password">P4$5W0rD!</span>
+            <div class="app__output-right">
+              <span class="app__copied"></span>
+              <button class="app__copy">
+                <img src="assets/images/icon-copy.svg" alt="Copy password" />
+              </button>
+            </div>
+          </div>
+          <form class="app__controls">
+            <div class="app__length">
+              <div class="app__length-header">
+                <label for="char-length" class="app__length-label"
+                  >Character Length</label
+                >
+                <output
+                  for="char-length"
+                  class="app__length-value"
+                  id="char-length-value"
+                  >0</output
+                >
+              </div>
+              <input
+                type="range"
+                id="char-length"
+                name="char-length"
+                min="0"
+                max="20"
+                value="0"
+                class="app__length-slider"
+              />
+            </div>
+            <fieldset class="app__options">
+              <ul class="app__list">
+                <li class="app__item">
+                  <input
+                    type="checkbox"
+                    id="uppercase"
+                    name="options"
+                    class="app__checkbox"
+                  />
+                  <label for="uppercase">Include Uppercase Letters</label>
+                </li>
+                <li class="app__item">
+                  <input
+                    type="checkbox"
+                    id="lowercase"
+                    name="options"
+                    class="app__checkbox"
+                  />
+                  <label for="lowercase">Include Lowercase Letters</label>
+                </li>
+                <li class="app__item">
+                  <input
+                    type="checkbox"
+                    id="numbers"
+                    name="options"
+                    class="app__checkbox"
+                  />
+                  <label for="options">Include Numbers</label>
+                </li>
+                <li class="app__item">
+                  <input
+                    type="checkbox"
+                    id="symbols"
+                    name="options"
+                    class="app__checkbox"
+                  />
+                  <label for="symbols">Include Symbols</label>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="app__strength">
+              <span class="app__strength-label">Strength</span>
+              <div class="app__strength-right">
+                <span class="app__strength-value"></span>
+                <div class="app__strength-bars">
+                  <span class="app__bar"></span>
+                  <span class="app__bar"></span>
+                  <span class="app__bar"></span>
+                  <span class="app__bar"></span>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="app__generate">
+              <span class="app__generate-text">Generate</span>
+              <img
+                class="app__generate-image"
+                src="assets/images/icon-arrow-right.svg"
+                alt="Generate"
+              />
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
